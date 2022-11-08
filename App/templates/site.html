@@ -1,0 +1,85 @@
+<!doctype html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<h3 style="text-align: center" class="text-muted"><span style="color:#000000;"><span style="font-size: 22px;"><span style="font-family: Times New Roman,Times,serif;"><em>Рекомендованное соотношение матрица-наполнитель в зависимости от значений</em></span></span></span></h3>
+
+</head>
+
+<body>
+<style>
+form {
+    margin: auto;
+    width: 55%;
+}
+
+.result {
+    margin: auto;
+    width: 55%;
+    border: 1px solid #ccc;
+}
+</style>
+
+<head>
+    <title>Salary Model</title>
+</head>
+
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Введите значения:</legend>
+        Плотность, кг/м3:
+        <input name="experience1" type="number" required>
+        <br>
+        Модуль упругости, ГПа:
+        <input name="experience2" type="number" required>
+        <br>
+        Количество отвердителя, м.%:
+        <input name="experience3" type="number" required>
+        <br>
+        Содержание эпоксидных групп,%_2:
+        <input name="experience4" type="number" required>
+        <br>
+        Температура вспышки, С_2:
+        <input name="experience5" type="number" required>
+        <br>
+        Поверхностная плотность, г/м2:
+        <input name="experience6" type="number" required>
+        <br>
+        Модуль упругости при растяжении, ГПа:
+        <input name="experience7" type="number" required>
+        <br>
+        Прочность при растяжении, МПа:
+        <input name="experience8" type="number" required>
+        <br>
+        Потребление смолы, г/м2:
+        <input name="experience9" type="number" required>
+        <br>
+        Угол нашивки, град:
+        <input name="experience10" type="number" required>
+        <br>
+        Шаг нашивки:
+        <input name="experience11" type="number" required>
+        <br>
+        Плотность нашивки:
+        <input name="experience12" type="number" required>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+
+<div class="result" align="center">
+    {% if result %}
+    	<br> <p style="font-size:50px">Рекомендуемое соотношение:</p>
+   		<p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
+
+
+<style type="text/css">body {
+        background-image: url(""); 
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: #ffffff; 
+       }
+</style>
+</body>
+</html>
